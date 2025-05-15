@@ -1,10 +1,5 @@
 import React from "react";
 
-export default function Main() {
-  return (
-    <div className="main">
-      <p>1/10</p>
-      <p>Question?</p>
-    </div>
-  );
+export default function Main({ children }) {
+  return <div className="main">{children}</div>;
 }
