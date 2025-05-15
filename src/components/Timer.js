@@ -10,7 +10,7 @@ export default function Timer({ dispatch, secondsRemaining }) {
     }, 1000);
 
     return () => clearInterval(id);
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={"timer"}>
