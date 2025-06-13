@@ -91,7 +91,7 @@ export default function App() {
 
   useEffect(function () {
     // noinspection JSCheckFunctionSignatures
-    fetch("http://localhost:4000/questions")
+    fetch("https:quiz.khush.pro:4000/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataError" }));
