@@ -94,7 +94,6 @@ export default function App() {
     fetch("https://openapi.khush.pro/quiz")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data)
         dispatch({type: "dataReceived", payload: data.data})
       })
       .catch((err) => dispatch({ type: "dataError" }));
