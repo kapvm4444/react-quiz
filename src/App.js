@@ -91,9 +91,12 @@ export default function App() {
 
   useEffect(function () {
     // noinspection JSCheckFunctionSignatures
-    fetch("http://localhost:4000/questions")
+    fetch("https://openapi.khush.pro/quiz")
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
+      .then((data) => {
+        console.log(data.data)
+        dispatch({type: "dataReceived", payload: data.data})
+      })
       .catch((err) => dispatch({ type: "dataError" }));
   }, []);
 
