@@ -3,7 +3,7 @@ import Options from "./Options";
 import { useQuiz } from "../context/QuizContext";
 
 export default function Question() {
-  const { questions, dispatch, answer, index } = useQuiz();
+  const { questions, index } = useQuiz();
   const question = questions[index];
 
   return (
@@ -11,7 +11,7 @@ export default function Question() {
       <h4>
         {question.question} ({question.points} Points)
       </h4>
-      <Options question={question} dispatch={dispatch} answer={answer} />
+      <Options question={question} />
     </div>
   );
 }
