@@ -1,9 +1,6 @@
 import React from "react";
-import { useQuiz } from "../context/QuizContext";
 
-export default function ResetButton() {
-  const { dispatch } = useQuiz();
-
+export default function ResetButton({ dispatch }) {
   return (
     <button
       className={"btn btn-ui"}
